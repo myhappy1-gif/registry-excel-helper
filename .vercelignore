@@ -1,0 +1,16 @@
+# 실제 등기 PDF(개인정보)는 배포 때 올리지 않는다
+real-sample/
+부동산등기*.pdf
+.work/
+output/
+trash-can/
+.env*
+
+# 시연판은 미리 읽어 둔 결과(JSON)만 쓰므로 등기 파일은 올리지 않는다
+sample-data/pdfs/
+sample-data/images/
+.bkit/
+.claude/
+.next/
+tests/
+trash-can/

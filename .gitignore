@@ -1,0 +1,56 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# 실제 등기 PDF(개인정보): 모양 참고용으로만 두고 절대 깃에 올리지 않는다
+/부동산등기*.pdf
+/real-sample/
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# 프로젝트 작업용 폴더·파일 (개인정보·임시 파일이 들어갈 수 있어 올리지 않음)
+.work/
+output/
+trash-can/
+*.traineddata
+
+# 설정 예시 파일은 올려도 됨 (비밀 값은 넣지 않는다)
+!.env.example
+
+.vercel

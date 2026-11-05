@@ -1,0 +1,36 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "sample": "node scripts/make-sample.mjs",
+    "sample:pdf": "node scripts/make-register-pdfs.mjs",
+    "sample:phone": "node scripts/make-phone-sample.mjs"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "next": "16.4.5",
+    "pdfjs-dist": "^6.5.438",
+    "pngjs": "^7.0.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^3.2.7"
+  }
+}
