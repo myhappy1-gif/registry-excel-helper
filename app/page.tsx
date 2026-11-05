@@ -43,7 +43,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <header className="bg-navy text-white">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-8">
-          <span className="text-[17px] font-semibold tracking-[-0.02em]">등기 대조·입력 도우미</span>
+          <span className="text-[17px] font-semibold tracking-[-0.02em]">재개발구역 변상금 부과 도우미</span>
           <nav aria-label="바로가기" className="flex items-center gap-5 text-[14px]">
             <a href="#features" className="hidden text-[#c9d2ee] hover:text-white sm:inline">할 수 있는 일</a>
             <a href="#rules" className="hidden text-[#c9d2ee] hover:text-white sm:inline">안전장치</a>
@@ -58,10 +58,10 @@ export default function Home() {
           <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 pb-16 pt-8 sm:px-8 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-14 lg:pb-20">
             <div>
               <h1 className="text-[32px] font-semibold leading-[1.3] tracking-[-0.03em] sm:text-[38px]">
-                읽고, 맞춰 보고,<br />승인만 하세요
+                변상금 대상·기간<br />자동 산정
               </h1>
               <p className="mt-4 max-w-xl text-[16px] leading-7 text-[#c9d2ee]">
-                등기 PDF를 엑셀과 줄마다 비교해 두고, 서로 다른 곳만 보여드립니다. 변상금 부과 기간도 소유자별로 계산해 두며, 직원이 확인한 줄만 입력됩니다.
+                등기·구청 자료·엑셀 자동 대조 → 소유자별 부과 기간 계산 → 직원 승인
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link href="/work" className="inline-flex min-h-11 items-center justify-center rounded-lg bg-brand px-7 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#e00047]">대조 시작하기</Link>
@@ -95,6 +95,22 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 배경 설명: 처음 보는 사람이 무슨 업무인지 알 수 있게 */}
+        <section aria-label="이 도우미가 필요한 이유" className="border-b border-line bg-wash">
+          <div className="mx-auto grid w-full max-w-6xl gap-4 px-4 py-10 sm:px-8 md:grid-cols-3">
+            {([
+              ["업무", "재개발 용도폐지 국유지 · 소유자별 점유기간 확인 · 변상금 부과"],
+              ["문제", "수백 건 등기부·구청 자료·엑셀 수작업 대조"],
+              ["해결", "자동 대조·기간 계산 · 달라진 곳만 직원 확인"],
+            ] as const).map(([t, b]) => (
+              <div key={t} className="rounded-xl border border-line bg-white p-5">
+                <h2 className="text-[15px] font-semibold text-navy">{t}</h2>
+                <p className="mt-1.5 text-[14px] leading-6 text-muted">{b}</p>
+              </div>
+            ))}
           </div>
         </section>
 

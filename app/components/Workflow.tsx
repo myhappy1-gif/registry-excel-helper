@@ -280,7 +280,7 @@ export default function Workflow() {
       <header className="bg-navy text-white">
         <div className="mx-auto w-full max-w-6xl px-4 pt-4 sm:px-8">
           <div className="flex items-center justify-between gap-3">
-            <h1 className="text-[17px] font-semibold tracking-[-0.02em]"><Link href="/" className="hover:underline" title="소개 화면으로">등기 대조·입력 도우미</Link></h1>
+            <h1 className="text-[17px] font-semibold tracking-[-0.02em]"><Link href="/" className="hover:underline" title="소개 화면으로">재개발구역 변상금 부과 도우미</Link></h1>
             <p className="hidden text-[12px] text-[#aab6dc] sm:block">연습용 가짜(샘플) 데이터로만 동작해요</p>
           </div>
           <nav aria-label="진행 단계" className="mt-3 flex gap-1 overflow-x-auto">

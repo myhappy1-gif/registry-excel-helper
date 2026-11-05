@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import Workflow from "../components/Workflow";
 
-export const metadata: Metadata = { title: "작업 화면 · 등기 대조·입력 도우미" };
+export const metadata: Metadata = { title: "작업 화면 · 재개발구역 변상금 부과 도우미" };
 
 export default function WorkPage() {
   return <Workflow />;
