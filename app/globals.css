@@ -1,17 +1,12 @@
 @import "tailwindcss";
 
 /*
- * 디자인 기준 (Halo 스타일을 사무용 앱에 맞게 절제해서 적용)
- * - 배경 #F5F5F5, 본문 검정, 흰 카드(rounded-2xl), 검정 pill 버튼
- * - 사무용이라 영상 배경·화려한 움직임은 쓰지 않고, 부드러운 색 전환만 둔다.
- * - 항상 밝은 화면으로 쓴다(어두운 모드 없음): 문서·표를 오래 보는 업무 화면이라 일관된 대비를 우선한다.
+ * 디자인 기준: 사무용 업무 화면. 네이비를 기본색으로, 레드는 충돌·주의에만, 그레이는 보조 정보에 쓴다.
+ * - 색은 의미대로: 네이비(기본·버튼·자동 보완) / 레드(충돌·주의) / 그레이(같음·구분선·보조)
+ * - 항상 밝은 화면(어두운 모드 없음): 표와 문서를 오래 보는 업무 화면이라 일관된 대비를 우선한다.
+ * - 글꼴은 Pretendard(무료 오픈소스, app/fonts)를 직접 실어서 어느 PC에서나 같게 보이게 한다.
  */
 :root {
-  --background: #f5f5f5;
-  --foreground: #0a0a0a;
-  --surface: #ffffff;
-  --line: #e4e4e4;
-  --muted: #5c5c5c;
   color-scheme: light;
 }
 
@@ -19,27 +14,36 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  /* TT Norms Pro가 설치돼 있으면 쓰고, 없으면 한글이 또렷한 시스템 글꼴로 대체한다(글꼴 파일을 따로 내려받지 않음). */
-  --font-sans: "TT Norms Pro", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Segoe UI", system-ui, sans-serif;
+  --color-navy: #091f5f;
+  --color-navy-hover: #1a3a8f;
+  --color-navy-tint: #e6eaf5;
+  --color-brand: #ff0050;
+  --color-brand-deep: #b30000;
+  --color-brand-tint: #ffe5ec;
+  --color-line: #e6e6e6;
+  --color-wash: #f5f5f5;
+  --color-ink: #1a1a1a;
+  --color-muted: #666b73;
+  --font-sans: var(--font-pretendard), "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-wash);
+  color: var(--color-ink);
   font-family: var(--font-sans);
-  letter-spacing: -0.01em;
+  font-size: 15px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "tnum" 1; /* 숫자 폭을 같게 해서 표의 숫자가 가지런히 보이게 한다 */
 }
 
 h1, h2, h3 {
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 /* 키보드로 이동할 때 현재 위치가 또렷이 보이게 한다. */
 :focus-visible {
-  outline: 2px solid var(--foreground);
+  outline: 2px solid var(--color-navy);
   outline-offset: 2px;
 }
 
