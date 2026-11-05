@@ -45,9 +45,9 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-8">
           <span className="text-[17px] font-semibold tracking-[-0.02em]">등기 대조·입력 도우미</span>
           <nav aria-label="바로가기" className="flex items-center gap-5 text-[14px]">
-            <a href="#features" className="hidden text-[#c9d2ee] hover:text-white sm:inline">기능</a>
-            <a href="#rules" className="hidden text-[#c9d2ee] hover:text-white sm:inline">안전 규칙</a>
-            <Link href="/work" className="rounded-lg bg-white px-4 py-2 font-semibold text-navy hover:bg-navy-tint">작업 시작</Link>
+            <a href="#features" className="hidden text-[#c9d2ee] hover:text-white sm:inline">할 수 있는 일</a>
+            <a href="#rules" className="hidden text-[#c9d2ee] hover:text-white sm:inline">안전장치</a>
+            <Link href="/work" className="rounded-lg bg-white px-4 py-2 font-semibold text-navy hover:bg-navy-tint">대조 시작하기</Link>
           </nav>
         </div>
       </header>
@@ -58,14 +58,14 @@ export default function Home() {
           <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 pb-16 pt-8 sm:px-8 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-14 lg:pb-20">
             <div>
               <h1 className="text-[32px] font-semibold leading-[1.3] tracking-[-0.03em] sm:text-[38px]">
-                등기와 엑셀을<br />자동으로 대조합니다
+                읽고, 맞춰 보고,<br />승인만 하세요
               </h1>
               <p className="mt-4 max-w-xl text-[16px] leading-7 text-[#c9d2ee]">
-                등기 PDF를 읽어 엑셀과 항목별로 맞춰 봅니다. 다른 값만 직원이 확인하고, 승인한 줄만 입력합니다. 변상금 부과 기간도 소유자별로 계산합니다.
+                등기 PDF를 엑셀과 줄마다 비교해 두고, 서로 다른 곳만 보여드립니다. 변상금 부과 기간도 소유자별로 계산해 두며, 직원이 확인한 줄만 입력됩니다.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/work" className="inline-flex min-h-11 items-center justify-center rounded-lg bg-brand px-7 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#e00047]">작업 시작</Link>
-                <a href="#features" className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/35 px-6 text-[15px] font-medium text-white transition-colors duration-150 hover:bg-white/10">기능 보기</a>
+                <Link href="/work" className="inline-flex min-h-11 items-center justify-center rounded-lg bg-brand px-7 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#e00047]">대조 시작하기</Link>
+                <a href="#features" className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/35 px-6 text-[15px] font-medium text-white transition-colors duration-150 hover:bg-white/10">할 수 있는 일 보기</a>
               </div>
               <p className="mt-4 text-[12px] text-[#8fa0cf]">현재는 가짜(샘플) 데이터로만 동작합니다.</p>
             </div>
@@ -128,7 +128,7 @@ export default function Home() {
         {/* 기능 */}
         <section id="features" className="border-y border-line bg-white py-14">
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-8">
-            <h2 className="text-[24px] font-semibold tracking-[-0.03em]">기능</h2>
+            <h2 className="text-[24px] font-semibold tracking-[-0.03em]">할 수 있는 일</h2>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {FEATURES.map((f) => (
                 <li key={f.title} className="rounded-xl border border-line bg-wash p-5">
@@ -163,7 +163,7 @@ export default function Home() {
         {/* 안전 규칙 */}
         <section id="rules" className="bg-navy py-14 text-white">
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-8">
-            <h2 className="text-[24px] font-semibold tracking-[-0.03em]">안전 규칙</h2>
+            <h2 className="text-[24px] font-semibold tracking-[-0.03em]">안전장치</h2>
             <ul className="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
               {RULES.map((t) => (
                 <li key={t} className="border-t border-white/25 pt-3 text-[15px] leading-6">{t}</li>
@@ -175,7 +175,7 @@ export default function Home() {
         <section className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-8">
           <div className="flex flex-col items-start justify-between gap-4 rounded-xl border border-line bg-white p-6 sm:flex-row sm:items-center">
             <p className="text-[16px] font-medium">샘플 데이터로 바로 시험해 볼 수 있습니다.</p>
-            <Link href="/work" className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg bg-navy px-8 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-navy-hover">작업 시작</Link>
+            <Link href="/work" className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg bg-navy px-8 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-navy-hover">대조 시작하기</Link>
           </div>
         </section>
       </main>
