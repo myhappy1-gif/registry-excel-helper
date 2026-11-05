@@ -4,6 +4,7 @@
 // Plan: PLAN.md 14~17번. 업무 규칙은 lib/ 의 순수 함수를 그대로 쓰고, 이 파일은 보여주고 선택을 받는 일만 한다.
 // 디자인(2026-11-05 개편): 네이비 상단 바 + 단계 탭, 충돌은 카드가 아니라 비교 표, 아래쪽 고정 바에 "남은 확인 N개". 색은 의미대로(네이비 기본 / 레드 충돌 / 그레이 보조).
 
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { BILLING_SKIP_TEXT } from "@/lib/billing-period";
 import { applyDecisions, isResolved, itemKey, needsDecision, type Decision, type DecisionChoice } from "@/lib/decisions";
@@ -279,7 +280,7 @@ export default function Workflow() {
       <header className="bg-navy text-white">
         <div className="mx-auto w-full max-w-6xl px-4 pt-4 sm:px-8">
           <div className="flex items-center justify-between gap-3">
-            <h1 className="text-[17px] font-semibold tracking-[-0.02em]">등기 대조·입력 도우미</h1>
+            <h1 className="text-[17px] font-semibold tracking-[-0.02em]"><Link href="/" className="hover:underline" title="소개 화면으로">등기 대조·입력 도우미</Link></h1>
             <p className="hidden text-[12px] text-[#aab6dc] sm:block">연습용 가짜(샘플) 데이터로만 동작해요</p>
           </div>
           <nav aria-label="진행 단계" className="mt-3 flex gap-1 overflow-x-auto">

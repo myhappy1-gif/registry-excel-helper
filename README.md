@@ -39,7 +39,7 @@
 npm install
 npm run sample        # 가짜 샘플 데이터 만들기 (엑셀·정답표)
 npm run sample:phone  # 가짜 전화번호 엑셀
-npm run dev           # http://127.0.0.1:3000
+npm run dev           # 소개 화면 http://127.0.0.1:3000 / 작업 화면 http://127.0.0.1:3000/work
 npm run test          # 규칙 시험
 ```
 

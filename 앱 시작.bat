@@ -12,7 +12,7 @@ echo  끝내려면 이 검은 창을 닫으세요.
 echo.
 
 rem 서버가 켜질 시간을 준 뒤 브라우저를 연다
-start "" cmd /c "timeout /t 8 /nobreak > nul & start http://127.0.0.1:3000"
+start "" cmd /c "timeout /t 8 /nobreak > nul & start http://127.0.0.1:3000/work"
 
 call npm.cmd run dev
 pause
